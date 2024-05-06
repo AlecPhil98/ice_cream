@@ -72,6 +72,7 @@ function customizeIceCream(event) {
 
   
 }
+//To hide the toppings list 
 function hideShowToppings(event) {
 
     let toppings = document.querySelector("#toppings")
