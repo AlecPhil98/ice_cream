@@ -78,10 +78,10 @@ function hideShowToppings(event) {
 
     if (event.target.value === "cup") {
 
-        toppings.classList.remove("none")
+        toppings.classList.remove("d-none")
 
     } else {
-        toppings.classList.add("none")
+        toppings.classList.add("d-none")
     }
 
 }
