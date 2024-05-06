@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICe Cream shop</title>
+    <title>Ice Cream shop</title>
     <!-- Bootstrap stylesheet-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -13,45 +13,50 @@
 <body>
 
     <form id="iceCreamForm">
+        <!--Number of scoops-->
         <div class="mb-3">
             <label for="numScoops">Number of scoops:</label>
             <input id="numScoops" name="numScoops" type="number" required>
         </div>
+        <!--type of container-->
         <div class="mb-3">
-            <input type="radio" name="cone" id="cone" value="no">
-            <label for="cup">Cone</label>
-            <input type="radio" name="cup" id="cup" value="no">
-            <label for="cup">cup</label>
+            <input type="radio" name="coneOrCup" id="coneChecked" value="cone" >
+            <label for="coneOrCup">Cone</label>
+            <input type="radio" name="coneOrCup" id="cupChecked" value="cup"checked>
+            <label for="coneOrCup">Cup</label>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-                Sprinkles ($.50)
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-            <label class="form-check-label" for="defaultCheck2">
-                Whipped Cream ($0.25)
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-            <label class="form-check-label" for="defaultCheck3">
-                Hot Fudge ($1.25)
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-            <label class="form-check-label" for="defaultCheck4">
-                Cherry ($0.25)
-            </label>
-        </div>
+        <!--toppings-->
+        <section id="toppings">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="sprinkles" id="sprinkles">
+                <label class="form-check-label" for="sprinkles">
+                    Sprinkles ($.50)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="whippedCream" id="whippedCream">
+                <label class="form-check-label" for="whippedCream">
+                    Whipped Cream ($0.25)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="hotFudge" id="hotFudge">
+                <label class="form-check-label" for="hotFudge">
+                    Hot Fudge ($1.25)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="cherry" id="cherry">
+                <label class="form-check-label" for="cherry">
+                    Cherry ($0.25)
+                </label>
+            </div>
+        </section>
         <button>Submit Order</button>
     </form>
 
 
-
+    <div class="mt-3" id="results"></div>
 
     <!--Link bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
